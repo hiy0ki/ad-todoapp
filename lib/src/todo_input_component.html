@@ -1,0 +1,19 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+    <div class="form-group">
+      <label for="task">Task&nbsp;<span style="color:red;">*</span></label>
+      <input type="text" class="form-control" id="task" required
+             [(ngModel)]="todo.task"
+             #task="ngForm"
+             #spy
+             [class.is-valid]="task.valid"
+             [class.is-invalid]="!task.valid"
+             ngControll="task">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div [hidden]="task.valid || task.pristine" class="invalid-feedback">
+        Task is required
+      </div>
+    </div>
+  </form>
+  {{todo.task}}
+</div>
