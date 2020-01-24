@@ -1,5 +1,5 @@
 class Todo {
-  String task;
+  String title;
 
-  Todo(this.task);
+  Todo(this.title);
 }
