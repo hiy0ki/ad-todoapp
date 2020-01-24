@@ -6,16 +6,11 @@
       <input type="text" class="form-control" id="title" required
              [(ngModel)]="todo.title"
              #title="ngForm"
-             #spy
-             [class.is-valid]="title.valid"
-             [class.is-invalid]="!title.valid"
              ngControll="title">
       <button type="submit" class="btn btn-primary">Submit</button>
-      <div [hidden]="title.valid || title.pristine" class="invalid-feedback">
-        title is required
-      </div>
     </div>
   </form>
-  {{todo.title}}
+
+  <div *ngFor="let rtodo of todoList">{{rtodo}}</div>
 </div>
 

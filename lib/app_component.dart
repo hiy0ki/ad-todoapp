@@ -10,11 +10,14 @@ import 'src/todo.dart';
 )
 class AppComponent {
   var name = 'Angular hogehoge';
-
   bool submitted = false;
+  Todo todo = Todo(0, "");
+  List<Todo> todoList = [];
 
-  Todo todo = Todo("");
-
-  void onSubmit() => submitted = true;
+  void onSubmit() {
+    var length = todoList.length;
+    todoList.add(Todo(length + 1, todo.title));
+    todo.title = "";
+  }
 
 }
