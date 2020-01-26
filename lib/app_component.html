@@ -14,6 +14,7 @@
   <div *ngFor="let rtodo of todoList">
     <input type="checkbox" [(ngModel)]="rtodo.isDone"/>
     <span [style.text-decoration]="rtodo.isDone ? 'line-through' : 'none'">{{rtodo}}</span>
+    <button (click)="deleteTodo(rtodo)">delete</button> 
   </div>
 </div>
 

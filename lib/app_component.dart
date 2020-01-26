@@ -20,4 +20,7 @@ class AppComponent {
     todo.title = "";
   }
 
+  void deleteTodo(Todo todo) {
+    this.todoList.remove(todo);
+  }
 }
